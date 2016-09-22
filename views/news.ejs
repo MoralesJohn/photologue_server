@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Mongoose App</title>
+	<link rel="stylesheet" type="text/css" href="/style.css">
+	<!-- Latest compiled and minified CSS -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+	<!-- Latest compiled and minified JavaScript -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+</head>
+<body>
+	<div id="container">
+		<div id="logo">
+			<img src="/cyber-slug.jpg">
+			<h3>Banana Slug Database</h3>
+			<a href="/"><button class="btn, btn-primary">Back</button></a>
+		</div>
+		<div id="right">
+			<div id="mainbox" class="form-group">
+				<h4>Found a new slug?</h4>
+				<form action="/slugs" role="form" method="post">
+					<label for="name">Name:</label>
+					<input type="text" class="form-control" name="name" />
+					<label for="dt_found">Date Found:</label>
+					<input type="date" name="dt_found" />
+					<input type="submit" class="btn, btn-primary" value="Submit">
+				</form>
+			</div>  <!-- #mainbox -->
+		</div>  <!-- #right -->
+	</div>  <!-- #container -->
+</body>
+</html>

@@ -1,0 +1,57 @@
+/*Reset*/
+* {
+	margin: 0;
+	padding: 0;
+	font-family: verdana, sans-serif;
+}
+
+#container {
+	width: 750px;
+	margin: 10px auto;
+}
+
+#mainbox {
+	margin: 20px auto;
+	border: 1px solid #000000;
+	width: 450px;
+	padding: 0px 22px;
+}
+
+#right {
+	margin-left: 220px;
+	width: 470px;
+	display: inline-block;
+	vertical-align: top;
+	overflow: scroll;
+}
+
+#logo {
+	display: inline-block;
+	vertical-align: top;
+	position: fixed;
+	width: 200px;
+}
+
+img {
+	margin: 20px auto;
+	display: block;
+	max-width: 100%;
+	height: auto;
+}
+
+#list {
+	margin: 20px auto;
+	border: 1px solid #000000;
+	width: 450px;
+	padding: 0px 22px;
+}
+
+.btn {
+	padding: 5px 10px;
+	margin: 10px 0;
+}
+
+.btn-danger {
+	margin-left: 100px;
+	vertical-align: top;
+}

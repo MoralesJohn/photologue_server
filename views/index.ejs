@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Photologue</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<!-- Latest compiled and minified CSS -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+	<!-- Latest compiled and minified JavaScript -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+</head>
+<body>
+	<div id="container">
+		<div id="logo">
+			Memories
+
+		</div>
+		<div id="right">
+			<div id="mainbox" class="form-group">
+				<% for(var i=0; i<entries.length; i++) { %>
+					<p>Name: <%= entries[i].name %>, Found on: <%= entries[i].dt_found %></p>
+					<a href="/entries/<%=entries[i]._id%>"><button class="btn, btn-primary">View</button></a>
+					<a href="/entries/<%=entries[i]._id%>/edit"><button class="btn, btn-primary">Edit</button></a>
+					<!-- <form action="/entries/<%=entries[i]._id%>/destroy" method='post'> -->
+						<a href="/entries/<%=entries[i]._id%>/destroy"><input type="submit" class="btn, btn-danger" value="Delete"/ ></a>
+					<!-- </form> -->
+					<hr />
+				<% } %>
+
+			</div>  <!-- #mainbox -->
+		</div>  <!-- #right -->
+	</div>  <!-- #container -->
+</body>
+</html>
