@@ -4,7 +4,7 @@ var mongoose = require('mongoose');
 var bodyParser = require("body-parser");
 var path = require("path");
 var multer = require('multer');
-var upload = multer({dest: './uploads/'})
+var upload = multer({ dest: './uploads/' });
 
 var app = express();
 mongoose.connect('mongodb://localhost/photologuedb');
@@ -46,11 +46,13 @@ app.get('/entries/:id', function(req, res){
 app.post('/upload', upload.single('pic'), function (req, res) {
 	// req.files is array of `photos` files 
 	// req.body will contain the text fields, if there were any 
-	var entry = new Entry({comments: req.body.comments, date: req.body.date, image: req.body.filename});
+	console.log(req.body);
+	console.log(req.file);
+	var entry = new Entry({comments: req.body.comments, date: req.body.date, image: req.file.filename});
 	entry.save(function(err){
 		if (err) throw err;
 	});
-	res.json({});
+	res.json({success: true});
 });
 
 app.post('/entries', function(req, res){
